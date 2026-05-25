@@ -22,6 +22,7 @@ A cinematic, scroll-driven landing page for the **Celsius Energy** drink brand, 
 
 ## Highlights
 
+- **Animated preloader** — a full-screen loader reveals the Celsius logo via a `clip-path` wipe synced to a 0→100% counter and progress bar, then fades out and gates the site render until loading completes (`src/components/Loader.jsx`).
 - **Scroll-choreographed storytelling** — each section is timed to scroll progress with GSAP `ScrollTrigger` (`scrub`, pinning, and timeline reveals).
 - **Clip-path title reveals** — headlines wipe into view with animated `clip-path` polygons for a premium editorial feel.
 - **Horizontal flavor slider** — product cans scroll sideways while the page scrolls vertically, with splash artwork using `mix-blend-mode`.
@@ -86,7 +87,9 @@ npm run preview
 
 The page is composed top-to-bottom in `src/App.jsx`:
 
-`NavBar → Hero → Message → Flavor → CategoryBar → Nutrition → Benefit → Testimonial → Footer`
+`Loader → (NavBar → Hero → Message → Flavor → CategoryBar → Nutrition → Benefit → Testimonial → Footer)`
+
+The `Loader` renders first and holds back the rest of the page; once its GSAP timeline finishes it flips a `loading` flag in `App.jsx`, which then mounts the sections and refreshes `ScrollTrigger`.
 
 Each section owns its own GSAP timeline via the `useGSAP` hook, so animations are scoped and cleaned up automatically on unmount.
 
