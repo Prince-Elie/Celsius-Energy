@@ -54,8 +54,8 @@ const BenefitSection = () => {
           <div className="mt-20 col-center">
             <ClipPathTitle
               title={"Essential Energy"}
-              color={"#231f20"}
-              bg={"#ff9933"}
+              color={"#ffffff"}
+              bg={"#cb3133"}
               className={"first-title"}
               borderColor={"#231f20"}
             />
@@ -68,15 +68,15 @@ const BenefitSection = () => {
             />
             <ClipPathTitle
               title={"Burns Body Fat"}
-              color={"#ffffff"}
-              bg={"#cb3133"}
+              color={"#231f20"}
+              bg={"#ff9933"}
               className={"third-title"}
               borderColor={"#231f20"}
             />
             <ClipPathTitle
               title={"Zero Sugar"}
               color={"#231f20"}
-              bg={"#ff9933"}
+              bg={"#ffffff"}
               className={"fourth-title"}
               borderColor={"#231f20"}
             />
