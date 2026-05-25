@@ -252,7 +252,7 @@ body::-webkit-scrollbar {
 
       .otg-label {
         @apply font-bold uppercase text-sm md:text-base mb-4;
-        color: var(--color-celsius-orange);
+        color: var(--color-celsius-red);
         letter-spacing: 0.25em;
       }
 
