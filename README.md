@@ -17,12 +17,7 @@ A cinematic, scroll-driven landing page for the **Celsius Energy** drink brand, 
 
 ## Demo
 
-> Add your deployment URL here once published, plus a short screen recording or GIF of the scroll experience.
-
-```
-Live: https://your-deployment-url.example
-```
-
+**Live:** https://prince-elie.github.io/Celsius-Energy/
 ---
 
 ## Highlights
