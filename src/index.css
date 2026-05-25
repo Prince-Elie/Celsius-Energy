@@ -163,7 +163,7 @@ body::-webkit-scrollbar {
     }
 
     .flavor-cta {
-      @apply flex-none self-center z-40 inline-flex items-stretch font-bold uppercase text-celsius-white no-underline transition-colors;
+      @apply flex-none self-center z-40 inline-flex items-stretch font-bold uppercase text-celsius-white no-underline transition-colors lg:ms-40 ms-16;
       letter-spacing: 0.15em;
 
       > span:first-child {
@@ -213,6 +213,7 @@ body::-webkit-scrollbar {
           width: 120%;
           height: 120%;
           object-fit: cover;
+          object-position: 20% center;
           z-index: 0;
           mix-blend-mode: multiply;
         }
@@ -346,7 +347,7 @@ body::-webkit-scrollbar {
   }
 
   .testimonials-section {
-    @apply bg-milk relative w-full h-[110dvh] lg:h-[160dvh];
+    @apply bg-milk relative w-full h-[120dvh];
 
     .pin-box {
       @apply flex items-center justify-center w-full ps-52 absolute 2xl:bottom-32 bottom-[50vh];
@@ -418,13 +419,61 @@ body::-webkit-scrollbar {
 
   a {
     @apply font-bold uppercase no-underline transition-colors;
-    color: var(--color-celsius-muted);
+    color: var(--color-celsius-muted-strong);
     font-size: 0.65rem;
     letter-spacing: 0.2em;
   }
 
   a:hover {
     color: var(--color-celsius-red);
+  }
+}
+
+.loader {
+  @apply fixed inset-0 z-[100] flex items-center justify-center;
+  background-color: var(--color-celsius-black);
+}
+
+.loader-inner {
+  @apply flex flex-col items-center gap-8 w-full max-w-md px-8;
+}
+
+.loader-logo {
+  @apply w-56 md:w-72;
+  filter: brightness(0) invert(1);
+}
+
+.loader-progress {
+  @apply w-full flex flex-col items-center gap-3;
+}
+
+.loader-bar-track {
+  @apply w-full h-[3px] overflow-hidden rounded-full;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.loader-bar-fill {
+  @apply h-full w-full origin-left;
+  transform: scaleX(0);
+  background-color: var(--color-celsius-white);
+}
+
+.loader-count {
+  @apply font-sans font-bold text-celsius-white text-xl md:text-2xl;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.1em;
+}
+
+.site-reveal {
+  animation: site-fade 0.7s ease both;
+}
+
+@keyframes site-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 

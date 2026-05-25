@@ -9,11 +9,31 @@ import CategoryBar from "./components/CategoryBar";
 import BenefitSection from "./sections/BenefitSection";
 import TestimonialSection from "./sections/TestimonialSection";
 import FooterSection from "./sections/FooterSection";
-import { useEffect } from "react";
+import Loader from "./components/Loader";
+import { useEffect, useState } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const App = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = loading ? "hidden" : "";
+    if (!loading) {
+      window.scrollTo(0, 0);
+      ScrollTrigger.refresh();
+      requestAnimationFrame(() => ScrollTrigger.refresh());
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [loading]);
+
   useEffect(() => {
     const onLoad = () => ScrollTrigger.refresh();
     if (document.readyState === "complete") {
@@ -31,8 +51,12 @@ const App = () => {
     return () => window.removeEventListener("load", onLoad);
   }, []);
 
+  if (loading) {
+    return <Loader onComplete={() => setLoading(false)} />;
+  }
+
   return (
-    <main>
+    <main className="site-reveal">
       <NavBar />
       <HeroSection />
       <MessageSection />

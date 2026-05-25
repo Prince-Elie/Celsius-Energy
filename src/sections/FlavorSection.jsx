@@ -12,6 +12,11 @@ const FlavorSection = () => {
           <div className="h-full">
             <FlavorSlider />
           </div>
+
+          <a href="#" className="flavor-cta" aria-label="Get it now">
+            <span>Get it now</span>
+            <span className="flavor-cta-plus">+</span>
+          </a>
         </div>
       </div>
     </section>
