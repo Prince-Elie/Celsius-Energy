@@ -122,6 +122,11 @@ const FlavorSlider = () => {
             <h1>{flavor.name}</h1>
           </div>
         ))}
+
+        <a href="#" className="flavor-cta" aria-label="Get it now">
+          <span>Get it now</span>
+          <span className="flavor-cta-plus">+</span>
+        </a>
       </div>
     </div>
   );

@@ -8,7 +8,7 @@ const TestimonialSection = () => {
 
   useGSAP(() => {
     gsap.set(".testimonials-section", {
-      marginTop: "-140vh",
+      marginTop: "-120vh",
     });
 
     const tl = gsap.timeline({

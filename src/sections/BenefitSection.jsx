@@ -51,7 +51,7 @@ const BenefitSection = () => {
             Explore the Key Benefits of Choosing Celsius
           </p>
 
-          <div className="mt-20 col-center">
+          <div className="mt-10 col-center">
             <ClipPathTitle
               title={"Essential Energy"}
               color={"#ffffff"}
@@ -69,7 +69,7 @@ const BenefitSection = () => {
             <ClipPathTitle
               title={"Burns Body Fat"}
               color={"#231f20"}
-              bg={"#ff9933"}
+              bg={"#e08a33"}
               className={"third-title"}
               borderColor={"#231f20"}
             />
