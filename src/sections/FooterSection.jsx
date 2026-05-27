@@ -52,7 +52,7 @@ const FooterSection = () => {
           />
         )}
 
-        <div className="flex-center gap-5 relative z-10 md:mt-8 mt-3">
+        <div className="flex-center gap-5 relative z-10 md:mt-2 mt-1">
           <a
             href="https://www.instagram.com/celsiusofficial"
             target="_blank"
