@@ -83,7 +83,8 @@ const TestimonialSection = () => {
           >
             <video
               ref={(el) => (vdRef.current[index] = el)}
-              src={card.src}
+              src={`${card.src}#t=0.1`}
+              preload="metadata"
               playsInline
               muted
               loop
