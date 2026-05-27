@@ -33,7 +33,7 @@ const FooterSection = () => {
         />
       </div>
 
-      <div className="2xl:h-[110dvh] relative md:pt-[20vh] pt-[10vh]">
+      <div className="2xl:h-[110dvh] relative md:pt-[20vh] pt-[10vh] md:pb-[8vh] pb-[6vh]">
         <div className="overflow-hidden z-10">
           <h1 className="general-title text-center text-milk py-5">
             #LIVEFIT
@@ -88,8 +88,8 @@ const FooterSection = () => {
           </a>
         </div>
 
-        <div className="mt-40 md:px-10 px-5 flex gap-10 md:flex-row flex-col justify-between text-milk font-paragraph md:text-lg font-medium">
-          <div className="flex items-center md:gap-16 gap-5">
+        <div className="mt-4 md:px-6 px-4 flex gap-10 md:flex-row flex-col justify-between text-milk font-paragraph md:text-sm text-xs font-medium">
+          <div className="flex items-start md:gap-12 gap-5 [&_p]:leading-relaxed">
             <div>
               <p>Celsius Flavors</p>
             </div>
